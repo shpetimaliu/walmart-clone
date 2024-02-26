@@ -17,7 +17,7 @@ function GridOptions({ title, image, className }: Props) {
       }}
       className={cn("grid-option relative", className)}
     >
-      <h2>{title}</h2>
+      <h2 className="text-xl font-bold text-[##041E42]">{title}</h2>
       {image && (
         <Image
           src={image}
