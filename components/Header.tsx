@@ -10,10 +10,18 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { FormEvent } from "react";
 
 function Header() {
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {};
+  const router = useRouter();
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const input = e.currentTarget.input.value;
+    router.push(`/search?q=${input}`);
+  };
 
   return (
     <header className="flex flex-col md:flex-row bg-walmart items-center px-10 py-7 space-x-5">
@@ -26,6 +34,7 @@ function Header() {
       >
         <input
           type="text"
+          name="input"
           placeholder="Search Everything"
           className="flex-1 px-4 rounded-l-full outline-none placeholder:text-sm"
         />
