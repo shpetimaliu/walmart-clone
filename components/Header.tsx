@@ -36,7 +36,7 @@ function Header() {
           type="text"
           name="input"
           placeholder="Search Everything"
-          className="flex-1 px-4 rounded-l-full outline-none placeholder:text-sm"
+          className="flex-1 px-4 rounded-l-full outline-none placeholder:text-sm text-black"
         />
         <button type="submit">
           <Search className="rounded-full h-10 px-2 w-10 bg-yellow-400 cursor-pointer" />
@@ -83,7 +83,7 @@ function Header() {
         </Link>
 
         <Link
-          href={"/"}
+          href={"/basket"}
           className="flex text-white font-bold items-center space-x-2 text-sm"
         >
           <ShoppingCart size={20} />
