@@ -1,14 +1,29 @@
-import { Grid2X2, Heart, LayoutGrid, Search, User } from "lucide-react";
+"use client";
+
+import {
+  Grid2X2,
+  Heart,
+  LayoutGrid,
+  Search,
+  ShoppingCart,
+  User,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { FormEvent } from "react";
 
 function Header() {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {};
+
   return (
-    <header className="flex bg-walmart items-center px-10 py-7 space-x-5">
+    <header className="flex flex-col md:flex-row bg-walmart items-center px-10 py-7 space-x-5">
       <Link href={"/"}>
         <Image alt="Logo" src="/logo.svg" width={150} height={150} />
       </Link>
-      <form className="flex items-center bg-white rounded-full w-full flex-1 ">
+      <form
+        onSubmit={handleSubmit}
+        className="flex items-center bg-white rounded-full w-full flex-1 "
+      >
         <input
           type="text"
           placeholder="Search Everything"
@@ -19,7 +34,7 @@ function Header() {
         </button>
       </form>
 
-      <div className="flex space-x-5 ">
+      <div className="flex space-x-5 mt-5 md:mt-0">
         <Link
           href={"/"}
           className="hidden xl:flex text-white font-bold items-center space-x-2 text-sm"
@@ -55,6 +70,17 @@ function Header() {
           <div>
             <p className="text-xs font-extralight">Sign In</p>
             <p>Accounts</p>
+          </div>
+        </Link>
+
+        <Link
+          href={"/"}
+          className="flex text-white font-bold items-center space-x-2 text-sm"
+        >
+          <ShoppingCart size={20} />
+          <div>
+            <p className="text-xs font-extralight">No Items</p>
+            <p>$0.00</p>
           </div>
         </Link>
       </div>
