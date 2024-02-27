@@ -18,4 +18,4 @@ SREENSHOT:
 
 ![SRC-1](https://github.com/shpetimaliu/walmart-clone/blob/master/screenshot/SRC-1.jpg?raw=true)
 ![SRC-2](https://github.com/shpetimaliu/walmart-clone/blob/master/screenshot/SRC-2.png?raw=true)
-![SRC-3](https://github.com/shpetimaliu/walmart-clone/blob/master/screenshot/SRC-3.jpg?raw=true)
+![SRC-3](https://github.com/shpetimaliu/walmart-clone/blob/master/screenshot/SRC-3.png?raw=true)
