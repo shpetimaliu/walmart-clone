@@ -16,7 +16,7 @@ async function SearchPage({ searchParams: { q } }: Props) {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 2000);
   }, []);
 
   if (loading) {
