@@ -1,5 +1,8 @@
+"use client";
 import Product from "@/components/Product";
+import { useEffect, useState } from "react";
 import products from "../../public/pr.json";
+import Loading from "./loading";
 
 type Props = {
   searchParams: {
@@ -8,6 +11,18 @@ type Props = {
 };
 
 async function SearchPage({ searchParams: { q } }: Props) {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
+
   if (!products.search_results) {
     return <div>No search results found.</div>;
   }
