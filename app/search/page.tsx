@@ -8,7 +8,6 @@ type Props = {
 };
 
 async function SearchPage({ searchParams: { q } }: Props) {
-  console.log(products);
   if (!products.search_results) {
     return <div>No search results found.</div>;
   }
