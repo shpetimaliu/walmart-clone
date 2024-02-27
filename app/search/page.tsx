@@ -1,3 +1,4 @@
+import Product from "@/components/Product";
 import products from "../../public/pr.json";
 
 type Props = {
@@ -19,7 +20,9 @@ async function SearchPage({ searchParams: { q } }: Props) {
 
       <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
         {products.search_results.map((item: any, index: number) => (
-          <li key={index}>{item.product.title}</li>
+          <li key={index}>
+            <Product product={item.product} />
+          </li>
         ))}
       </ul>
     </div>
